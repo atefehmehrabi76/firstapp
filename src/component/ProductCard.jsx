@@ -1,5 +1,5 @@
 import React from 'react';
-import ProductItem from './ProductItem';
+import ProductItem from "./ProductItem";
 
 function ProductCard() {
     const Product=[
@@ -44,7 +44,7 @@ function ProductCard() {
     <div>
        {Product.map((item)=>{
         return (
-           <ProductItem imageSrc={item.imageSrc} title={item.title} price={item.price}/>
+           <ProductItem imageSrc={item.imageSrc} title={item.title} price={item.price} key={item.id}/>
         )
        })}
     </div>

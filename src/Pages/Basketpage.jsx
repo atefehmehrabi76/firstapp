@@ -6,4 +6,4 @@ function basketpage() {
   )
 }
 
-export default basketpage
+export default basketpage;

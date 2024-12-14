@@ -1,8 +1,8 @@
 import { Route, Routes } from "react-router-dom";
-import Header from "./Project/Header";
-import HomePage from "./Project/HomePage";
+import Header from "./component/Header";
+import HomePage from "./Pages/HomePage";
 import NotFoundPage from "./Pages/NotFoundPage";
-import Basketpage from "./Project/Basketpage";
+import Basketpage from "./Pages/Basketpage";
 
 function App(){
   return (
