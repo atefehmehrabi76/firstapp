@@ -1,5 +1,5 @@
 import { createContext } from "react";
 
-const InputContext=createContext(null);
+const InputContext =createContext(null);
 
 export default InputContext;

@@ -1,15 +1,13 @@
-import { useContext } from "react";
-import InputContext from "../context/InputContext";
+import React, { useContext } from 'react';
+import InputContext from '../context/InputContext';
 
 function Input() {
-  const contextData=useContext(InputContext);
+    const InputDate=useContext(InputContext);
     
- return (
-    <div className='flex justify-between items-center p-2'>
-        <label htmlFor="text-input">{contextData.label}</label>
-        <br />
-        <input type={contextData.type} placeholder={contextData.placeholder} id='text-input' onKeyUp={(event)=>{contextData.handleKeyUp(event)}} className='border border-gray-700 p-2 rounded-lg m-5' />
-        
+  return (
+    <div className='flex justify-between items-center'>
+        <label htmlFor="text-input">{InputDate.label}</label>
+        <input className='border rounded-md border-gray-300 p-1' type={InputDate.type} id='text-input' placeholder={InputDate.placeholder} onKeyUp={(event)=>{InputDate.handleKeyUp(event)}} />
     </div>
   )
 }

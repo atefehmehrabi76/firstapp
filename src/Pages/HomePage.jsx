@@ -1,28 +1,25 @@
-
-// import ProductCard from "../component/ProductCard";
-import { useState } from "react";
+import React, { useState } from 'react';
+import InputContext from '../context/InputContext';
 import Box from "../component/Box";
-import InputContext from "../context/InputContext";
 
-export default function HomePage() {
+function HomePage() {
   const [firstName,setFirstName]=useState("");
-  const contextValue={
-    label:"your name",
+  const ContextValue={
+    label:"Your Name",
     type:"text",
     placeholder:"Enter Your Name",
     handleKeyUp:(e)=>{setFirstName(e.target.value)}
+    
   }
- 
   return (
-    <div>
-      <InputContext.Provider value={contextValue}>
-         <Box/>
+    <>
+      <InputContext.Provider value={ContextValue}>
+        <Box/>
       </InputContext.Provider>
-      
-        <hr />
-        <p>{firstName}</p>
-        
-        {/* <ProductCard /> */}
-    </div>
+      <hr />
+      <p className='text-center'>{firstName}</p>
+    </>
   )
 }
+
+export default HomePage;
