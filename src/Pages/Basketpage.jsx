@@ -1,9 +1,15 @@
-import React from 'react'
-
-function basketpage() {
+import useBasket from "../store/UseBasket";
+import BasketProductItem from "../component/BasketProductItem";
+const BasketPage = () => {
+  const { items, invoice } = useBasket();
   return (
-    <div>basketpage</div>
-  )
-}
+    <div>
+      <h2> total basket price: {invoice.totalPrice}</h2>
+      {items.map((item) => {
+        return <BasketProductItem key={item.id} productData={item} />;
+      })}
+    </div>
+  );
+};
 
-export default basketpage;
+export default BasketPage;

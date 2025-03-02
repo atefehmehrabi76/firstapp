@@ -1,5 +1,5 @@
 
-// import ProductCard from "../component/ProductCard";
+import ProductCard from "../component/ProductCard";
 import { useState } from "react";
 import Box from "../component/Box";
 import InputContext from "../context/InputContext";
@@ -22,7 +22,7 @@ export default function HomePage() {
         <hr />
         <p>{firstName}</p>
         
-        {/* <ProductCard /> */}
+        <ProductCard />
     </div>
   )
 }
